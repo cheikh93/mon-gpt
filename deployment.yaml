@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gpt-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gpt
+  template:
+    metadata:
+      labels:
+        app: gpt
+    spec:
+      containers:
+      - name: gpt-container
+        image: gpt-api:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
