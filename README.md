@@ -42,6 +42,13 @@ Invoke-RestMethod -Uri "http://localhost:5000/generate" -Method POST -Body '{"pr
 ## Déploiement :
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
+###
+## 🖼️ Démo du projet
+
+Voici un exemple de requête faite via PowerShell, montrant la réponse du modèle GPT :
+
+![Démo de l'API](assets/demo.png)
+
 
 ##
 Accès à l’API :
